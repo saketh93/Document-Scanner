@@ -35,8 +35,6 @@
     [self updateTitleLabel];
     [self.cameraViewController setDelegate:self];
     [self.capture_Button setHidden:true];
-    //    [self.cameraViewController setCameraViewType:(self.cameraViewController.cameraViewType == IPDFCameraViewTypeBlackAndWhite) ? IPDFCameraViewTypeNormal : IPDFCameraViewTypeBlackAndWhite];
-    //    [self updateTitleLabel];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -54,7 +52,7 @@
     switch (type) {
         case IPDFRectangeTypeGood:
             [self updateTitleLabel];
-            self.stableCounter ++;
+            [self.titleLabel setText:@"Bring camera close to Check"];
             [self capture];
             break;
         case IPDFRectangeTypeTooFar:
@@ -64,15 +62,9 @@
             [self.titleLabel setText:@"Adjust the camera Angle"];
             break;
         default:
-            self.stableCounter = 0;
             [self updateTitleLabel];
             break;
     }
-    
-    
-    //    if (self.stableCounter > self.detectionCountBeforeCapture){
-    //        [self capture];
-    //    }
 }
 
 #pragma mark -
@@ -146,6 +138,7 @@
 {
     [self capture];
 }
+
 - (void)capture {
     __weak typeof(self) weakSelf = self;
     [self.cameraViewController captureImageWithCompletionHander:^(NSString *imageFilePath, CGFloat confidenceeLevel)
@@ -154,11 +147,11 @@
          //         if (confidenceeLevel > 50 ) {
          //filter for blck and white
          GPUImageAdaptiveThresholdFilter *thresholdFilter = [[GPUImageAdaptiveThresholdFilter alloc] init];
-         thresholdFilter.blurRadiusInPixels = 10.0;
+         thresholdFilter.blurRadiusInPixels = 10.0; //change this as per u'r requirement
          
-         GPUImageLuminanceThresholdFilter *stillImageFilter2 = [[GPUImageLuminanceThresholdFilter alloc] init];
-         stillImageFilter2.threshold = 0.5f;//
-         [thresholdFilter addFilter:stillImageFilter2];
+         GPUImageLuminanceThresholdFilter *luminanceFilter = [[GPUImageLuminanceThresholdFilter alloc] init];
+         luminanceFilter.threshold = 0.5f;//change this as per u'r requirement
+         [thresholdFilter addFilter:luminanceFilter];
          
          UIImage *thresholdFiltr = [thresholdFilter imageByFilteringImage: [UIImage imageWithContentsOfFile:imageFilePath]];
          
