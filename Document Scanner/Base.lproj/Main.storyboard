@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,97 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U8-w6-wab">
+                                <rect key="frame" x="0.0" y="33" width="375" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEI-ne-PRK" customClass="IPDFCameraViewController">
+                                <rect key="frame" x="0.0" y="53.5" width="375" height="613.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx4-NW-ugI">
+                                        <rect key="frame" x="152.5" y="481.5" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="04d-tf-GU4"/>
+                                            <constraint firstAttribute="height" constant="70" id="OPb-fg-1V8"/>
+                                        </constraints>
+                                        <state key="normal" image="capture_button"/>
+                                        <connections>
+                                            <action selector="captureButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ibz-3o-Njt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-vh-Ntt">
+                                        <rect key="frame" x="328" y="22" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Lc5-6L-yzV"/>
+                                            <constraint firstAttribute="height" constant="30" id="jFg-iw-UZF"/>
+                                        </constraints>
+                                        <state key="normal" image="flash"/>
+                                        <connections>
+                                            <action selector="torchToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sJ-nH-0xc"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focusIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="1Op-Cr-fFm">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="A3m-82-Dnv"/>
+                                            <constraint firstAttribute="height" constant="75" id="cnk-nf-Nte"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1Op-Cr-fFm" firstAttribute="top" secondItem="fEI-ne-PRK" secondAttribute="top" id="LOL-z2-dBW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qx4-NW-ugI" secondAttribute="bottom" constant="62" id="Ois-Yn-M7g"/>
+                                    <constraint firstAttribute="trailing" secondItem="jdG-vh-Ntt" secondAttribute="trailing" constant="17" id="WFA-EU-yhR"/>
+                                    <constraint firstItem="Qx4-NW-ugI" firstAttribute="centerX" secondItem="fEI-ne-PRK" secondAttribute="centerX" id="miq-0E-QBC"/>
+                                    <constraint firstItem="1Op-Cr-fFm" firstAttribute="leading" secondItem="fEI-ne-PRK" secondAttribute="leading" id="wXx-Ha-e4W"/>
+                                    <constraint firstItem="jdG-vh-Ntt" firstAttribute="top" secondItem="fEI-ne-PRK" secondAttribute="top" constant="22" id="zes-B7-xH9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2U8-w6-wab" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="8Jb-KY-AC7"/>
+                            <constraint firstItem="2U8-w6-wab" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CY4-sm-v1s"/>
+                            <constraint firstItem="fEI-ne-PRK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="E8T-bN-jJq"/>
+                            <constraint firstItem="2U8-w6-wab" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L31-YV-bo9"/>
+                            <constraint firstItem="fEI-ne-PRK" firstAttribute="top" secondItem="2U8-w6-wab" secondAttribute="bottom" id="Wko-Cu-JYH"/>
+                            <constraint firstItem="fEI-ne-PRK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y9R-8H-CoF"/>
+                            <constraint firstItem="fEI-ne-PRK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lMh-bS-T3V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zWd-9Y-xop" appends="YES" id="pSl-MH-Epy"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="cameraViewController" destination="fEI-ne-PRK" id="hAn-UG-3Fw"/>
+                        <outlet property="capture_Button" destination="Qx4-NW-ugI" id="TfM-P7-6gs"/>
+                        <outlet property="focusIndicator" destination="1Op-Cr-fFm" id="umO-Fn-jbd"/>
+                        <outlet property="titleLabel" destination="2U8-w6-wab" id="FBv-th-FIy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zWd-9Y-xop">
+                    <connections>
+                        <action selector="focusGesture:" destination="BYZ-38-t0r" id="vuu-Vv-4hz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="capture_button" width="66" height="66"/>
+        <image name="flash" width="64" height="64"/>
+        <image name="focusIndicator" width="75" height="75"/>
+    </resources>
 </document>
