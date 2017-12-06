@@ -52,11 +52,11 @@
     switch (type) {
         case IPDFRectangeTypeGood:
             [self updateTitleLabel];
-            [self.titleLabel setText:@"Bring camera close to Check"];
+            [self.titleLabel setText:@"Bring camera close to Document"];
             [self capture];
             break;
         case IPDFRectangeTypeTooFar:
-            [self.titleLabel setText:@"Bring camera close to Check"];
+            [self.titleLabel setText:@"Bring camera close to Document"];
             break;
         case IPDFRectangeTypeBadAngle:
             [self.titleLabel setText:@"Adjust the camera Angle"];
