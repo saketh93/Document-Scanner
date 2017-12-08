@@ -6,9 +6,11 @@ Automatic document detection and filtering
 
 The subclass of UIView which enables border detection of a document based on [IPDFCameraViewController](https://github.com/mmackh/IPDFCameraViewController) and also filter the captured document automatically using [GPUImage](https://github.com/BradLarson/GPUImage). 
 
-![screenshot](https://raw.github.com/saketh93/SlideMenu/master/ScreenShots/home.png)
-![screenshot](https://raw.github.com/saketh93/SlideMenu/master/ScreenShots/menu.png)
-![screenshot](https://raw.github.com/saketh93/SlideMenu/master/ScreenShots/addition.png)
+![screenshot](https://raw.github.com/saketh93/Document-Scanner/blob/master/Document Scanner/ScreenShots/IMG_0277.png)
+
+![screenshot](https://raw.github.com/saketh93/Document-Scanner/blob/master/Document Scanner/ScreenShots/IMG_0275.png)
+
+![screenshot](https://raw.github.com/saketh93/Document-Scanner/blob/master/Document Scanner/ScreenShots/IMG_0276.png)
 
 ## Features
 - Live Border detection
