@@ -209,6 +209,7 @@
             [EAGLContext setCurrentContext:_context];
         }
         [_glkView bindDrawable];
+
         [_coreImageContext drawImage:image inRect:self.bounds fromRect:[self cropRectForPreviewImage:image]];
         [_glkView display];
         

@@ -113,15 +113,18 @@
 
 - (void)updateTitleLabel
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
+
     CATransition *animation = [CATransition animation];
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     animation.type = kCATransitionPush;
     animation.subtype = kCATransitionFromBottom;
     animation.duration = 0.35;
     [self.titleLabel.layer addAnimation:animation forKey:@"kCATransitionFade"];
-    
     NSString *filterMode = (self.cameraViewController.cameraViewType == IPDFCameraViewTypeBlackAndWhite) ? @"TEXT FILTER" : @"COLOR FILTER";
     self.titleLabel.text = [filterMode stringByAppendingFormat:@" | %@",(self.cameraViewController.isBorderDetectionEnabled)?@"AUTOCROP On":@"AUTOCROP Off"];
+    });
+
 }
 
 - (void)changeButton:(UIButton *)button targetTitle:(NSString *)title toStateEnabled:(BOOL)enabled

@@ -189,6 +189,9 @@
 		072AB5F51FD6A105003A2AA4 /* GPUImageLanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AB5461FD6A104003A2AA4 /* GPUImageLanczosResamplingFilter.m */; };
 		072AB5F61FD6A105003A2AA4 /* GPUImageLuminanceRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AB5491FD6A105003A2AA4 /* GPUImageLuminanceRangeFilter.m */; };
 		072AB5F91FD6A14C003A2AA4 /* IPDFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AB5F71FD6A14C003A2AA4 /* IPDFCameraViewController.m */; };
+		072AB6001FDABF22003A2AA4 /* IMG_0275.png in Resources */ = {isa = PBXBuildFile; fileRef = 072AB5FD1FDABF1F003A2AA4 /* IMG_0275.png */; };
+		072AB6011FDABF23003A2AA4 /* IMG_0276.png in Resources */ = {isa = PBXBuildFile; fileRef = 072AB5FE1FDABF21003A2AA4 /* IMG_0276.png */; };
+		072AB6021FDABF23003A2AA4 /* IMG_0277.png in Resources */ = {isa = PBXBuildFile; fileRef = 072AB5FF1FDABF22003A2AA4 /* IMG_0277.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -575,6 +578,9 @@
 		072AB5491FD6A105003A2AA4 /* GPUImageLuminanceRangeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageLuminanceRangeFilter.m; sourceTree = "<group>"; };
 		072AB5F71FD6A14C003A2AA4 /* IPDFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDFCameraViewController.m; sourceTree = "<group>"; };
 		072AB5F81FD6A14C003A2AA4 /* IPDFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFCameraViewController.h; sourceTree = "<group>"; };
+		072AB5FD1FDABF1F003A2AA4 /* IMG_0275.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0275.png; sourceTree = "<group>"; };
+		072AB5FE1FDABF21003A2AA4 /* IMG_0276.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0276.png; sourceTree = "<group>"; };
+		072AB5FF1FDABF22003A2AA4 /* IMG_0277.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0277.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,6 +631,7 @@
 		072AB3BA1FD69F57003A2AA4 /* Document Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				072AB5FC1FDAAA23003A2AA4 /* ScreenShots */,
 				072AB3ED1FD6A0A3003A2AA4 /* GPU Image */,
 				072AB5FA1FD6A333003A2AA4 /* CameraViewController */,
 				072AB3BB1FD69F57003A2AA4 /* AppDelegate.h */,
@@ -1022,6 +1029,16 @@
 			path = CameraViewController;
 			sourceTree = "<group>";
 		};
+		072AB5FC1FDAAA23003A2AA4 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				072AB5FD1FDABF1F003A2AA4 /* IMG_0275.png */,
+				072AB5FE1FDABF21003A2AA4 /* IMG_0276.png */,
+				072AB5FF1FDABF22003A2AA4 /* IMG_0277.png */,
+			);
+			path = ScreenShots;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1129,8 +1146,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				072AB3C81FD69F57003A2AA4 /* LaunchScreen.storyboard in Resources */,
+				072AB6011FDABF23003A2AA4 /* IMG_0276.png in Resources */,
+				072AB6001FDABF22003A2AA4 /* IMG_0275.png in Resources */,
 				072AB3C51FD69F57003A2AA4 /* Assets.xcassets in Resources */,
 				072AB3C31FD69F57003A2AA4 /* Main.storyboard in Resources */,
+				072AB6021FDABF23003A2AA4 /* IMG_0277.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
